@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  bring-global-db:
+    build:
+      context: .
+      dockerfile: ./docker-config/db/Dockerfile
+    container_name: bring-global-db
+    volumes:
+      - database_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - bring-global-network
+
+  bring-global-app:
+    build:
+      context: .
+      dockerfile: ./docker-config/app/Dockerfile
+    container_name: bring-global-app
+    env_file:
+      - .env
+    depends_on:
+      - bring-global-db
+    ports:
+      - "${APP_PORT}:8080"
+    networks:
+      - bring-global-network
+
+networks:
+  bring-global-network:
+
+volumes:
+  database_data:
