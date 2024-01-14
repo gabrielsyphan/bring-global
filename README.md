@@ -23,7 +23,7 @@ Before getting started, ensure you have the following installed on your machine:
     cd bring-global
     ```
 
-3. Create a copy of the `.env-example` file and rename it to `.env`:
+3. Create a copy of the `env-example.txt` file and rename it to `.env`:
 
     ```bash
     cp env-example.txt .env

@@ -1,0 +1,4 @@
+APP_PORT=80
+MYSQL_PASSWORD=root
+CONSUMER_KEY=consumerkey
+CONSUMER_SECRET=consumersecret
