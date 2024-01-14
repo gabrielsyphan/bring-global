@@ -40,8 +40,8 @@ docker-compose up -d --build
 ```
 
 ## Endpoints
-| Description                    | URI                                                                                                                                  |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Get all transactions           | [ http://localhost:80/transactions](http://localhost:80/transactions)                                                                |
-| Get transactions by type       | [ http://localhost:80/transactions/filter?type={transaction_type}](http://localhost:80//transactions/filter?type={transaction_type}) |
-| Get transaction amount by type | [ http://localhost:80/transactions/amount?type={transaction_type}](http://localhost:80/transactions/amount?type={transaction_type})  |
+| Method | Description                    | URI                                                                                                                                  |
+|-----|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| GET | Get all transactions           | [ http://localhost:80/transactions](http://localhost:80/transactions)                                                                |
+| GET | Get transactions by type       | [ http://localhost:80/transactions/filter?type={transaction_type}](http://localhost:80//transactions/filter?type={transaction_type}) |
+| GET | Get transaction amount by type | [ http://localhost:80/transactions/amount?type={transaction_type}](http://localhost:80/transactions/amount?type={transaction_type})  |
